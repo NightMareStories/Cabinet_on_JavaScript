@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/components/header.css">
+    <link type="text/css" rel="stylesheet" href="css/components/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabinet on JavaScript</title>
+</head>
+
+<body>
+    <header class="general-header">
+        <div class="general-header__top g-top-header">
+            <div class="g-top-header__content _container">
+                <div class="g-top-header__column g-header-info">
+                    <div class="g-header-info__logo">
+                        <picture>
+                            <source srcSet="img/logo-img.webp" type="image/webp" class="g-header-info__logo_img" />
+                            <img src="img/logo-img.png" alt="logo-img" class="g-header-info__logo_img" />
+                        </picture>
+                    </div>
+                    <div class="g-header-info__text">
+                        <div class="g-header-info__text_username">
+                            Poteryaev<br /> Aleksandr
+                        </div>
+                        <div class="g-header-info__text_userprof">
+                            Front-End Developer
+                        </div>
+                    </div>
+                </div>
+                <div class="g-top-header__column g-header-nav">
+                    <div class="g-header-nav__content">
+                        <nav class="g-header-nav__column">
+                            <ul class="g-header-nav__actions g-actions-header">
+                                <li><a href='/' class="g-actions-header__link"><span>GitHub</span></a></li>
+                                <li><a href='/' class="g-actions-header__link"><span>My Portfolio</span></a></li>
+                            </ul >
+                        </nav >
+                    </div >
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col xl8 l6 m5 s12">
+                    <h1 class="site-title center-align">Authorization</h1>
+                </div>
+                <div class="col xl4 l6 m7 s12 center-align">
+                    <!-- light-blue accent-3 -->
+                    <button class="modal-show waves-effect waves-light btn" data-modal="#sign-up"><i
+                        class="material-icons right">person_pin</i>Sign up</button>
+                    <button class="modal-show waves-effect waves-light btn"
+                        data-modal="#login-in"><i class="material-icons right">meeting_room</i>Login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="authorization-block">
+        <div class="authorization-block__reception">
+            <picture>
+                <source srcSet="img/reception-img.webp" type="image/webp" />
+                <img src="img/reception-img.png" alt="reception-img" class="authorization-block__reception_img"/>
+            </picture>
+        </div>
+        <div class="authorization-block__registration _hide">
+            <picture>
+                <source srcSet="img/registration-img.webp" type="image/webp" />
+                <img src="img/registration-img.png" alt="registration-img" class="authorization-block__registration_img"/>
+            </picture>
+        </div>
+        <div class="authorization-block__login _hide">
+            <picture>
+                <source srcSet="img/login-img.webp" type="image/webp" />
+                <img src="img/login-img.png" alt="login-img" class="authorization-block__login_img"/>
+            </picture> 
+        </div>
+    </div>
+    <div class="modal-wrap hide" id="sign-up">
+        <div class="modal-project sign-up-modal">
+            <button class="modal-project-close btn-floating btn red darken-4 waves-effect waves-light"><i
+                    class=" material-icons">close</i></button>
+            <div class="form-slider-wrapper">
+                <div class="form-slider">
+                    <div class="left-50">
+                        <form>
+                            <div class="row">
+                                <div class="input-field col m6 s12">
+                                    <input placeholder="Your Name" id="signup-name" name="name" type="text"
+                                        class="validate">
+                                    <label for="signup-name">Name</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <input id="signup-pass" name="pass" type="password" class="validate">
+                                    <label for="signup-pass">Password</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <input placeholder="Your Email" id="signup-email" name="email" type="email"
+                                        class="validate">
+                                    <label for="signup-email">Email</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <input placeholder="Your Birthday" id="signup-birthday" name="birthday" type="text"
+                                        class="datepicker">
+                                    <label for="signup-birthday">Birthday</label>
+                                </div>
+                                <div class="col m6 s6">
+                                    <p>
+                                        <label>
+                                            <input name="sex" type="radio" class="sex" value="male" checked>
+                                            <span>Male</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="sex" type="radio" class="sex" value="female">
+                                            <span>Female</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="sex" type="radio" class="sex" value="other">
+                                            <span>Other</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div class="col s6 accept-rules center-align">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" id="agree-rules">
+                                            <span class="checkbox-rules">Agree Rules</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <span class="read-rules">Read Rules</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 right-align">
+                                    <button id="signup-submit"
+                                        class="waves-effect waves-light btn disabled"><i
+                                            class="material-icons right ">account_box</i>Sign In</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="right-50">
+                        <p class="read-rules-back">Close rules</p>
+                        <p>
+                            "Cabinet on JavaScript" is an application written in "JavaScript ES6" and "Php" that uses the server-side development environment "OpenServer" and the "Materialize" framework to style the application. . It is an opportunity for a user to register in the system or log in and enter his personal account. In his personal account, he can always change his personal data or log out of it.
+                        </p>
+                        <p>
+                            This application has a "front-end" and "back-end" part and works through "ajax requests". The operation of the application looks like this: the user enters his data into the form, confirms the entered data, the data is sent to the server in the database, and with further authorization, the user enters his personal account.
+                        </p>
+                        <p>
+                            In the personal account for an authorized user, his personal data are loaded from the database and displayed in the appropriate fields. When the user's personal data changes, the updated data is also sent to the server in the database, and when you re-enter your personal account, the new personal data of the user that he changed is loaded.
+                        </p>
+                        <p>
+                            Also, the user can log out from the personal account and then the username and password will have to be entered again. This application actively used "cookies" to interact with the personal account, as well as to update its data
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-wrap hide" id="login-in">
+        <div class="modal-project">
+            <form>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Your Email" id="login-email" name="email" type="text" class="validate">
+                        <label for="login-email">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="login-pass" name="pass" type="password">
+                        <label for="login-pass">Password</label>
+                    </div>
+                    <div class="col s12 right-align">
+                        <button id="login-submit" class="waves-effect waves-light btn"><i
+                                class="material-icons right">input</i>Login</button>
+                    </div>
+                </div>
+            </form>
+            <button class="modal-project-close btn-floating btn red darken-4 waves-effect waves-light"><i
+                    class=" material-icons">close</i></button>
+        </div>
+    </div>
+
+    <footer class="general-footer">
+        <div class="general-footer__content g-content-footer _container">
+            <div class="g-content-footer__block g-block-footer">
+                <div class="g-block-footer__credits">
+                    <div class="g-block-footer__copyrights">
+                        &copy; 2021 Poteryaev Aleksandr
+                    </div>
+                    <div class="g-block-footer__project">
+                        <h3 class="g-block-footer__project_title">Project: <span>Cabinet on JavaScript</span></h3>
+                    </div>
+                </div>
+                <nav class="g-block-footer__nav">
+                    <ul class="g-block-footer__actions g-actions-footer">
+                        <li><a href='/' class="g-actions-footer__link"><span>GitHub</span></a></li>
+                        <li><a href='/' class="g-actions-footer__link"><span>My Portfolio</span></a></li>  
+                    </ul>
+                </nav >
+            </div>    
+        </div>
+    </footer>
+
+    <script src="js/materialize.js"></script>
+    <script src="script/ajax.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/main.js"></script>
+</body>
+
+</html>
