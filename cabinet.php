@@ -73,34 +73,34 @@
                 <form>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="signup-name" type="text" class="validate">
+                            <input id="signup-name" type="text" class="validate white-text">
                             <label class="active" for="signup-name">Name</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="signup-pass" type="text" class="validate">
+                            <input id="signup-pass" type="text" class="validate white-text">
                             <label class="active" for="signup-pass">Password</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="signup-birthday" type="text" class="datepicker">
+                            <input id="signup-birthday" type="text" class="datepicker white-text">
                             <label class="active" for="signup-birthday">Birthday</label>
                         </div>
                         <div class="col s12">
                             <p>
                                 <label>
                                     <input name="sex" type="radio" class="sex" value="male">
-                                    <span>Male</span>
+                                    <span class="white-text">Male</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input name="sex" type="radio" class="sex" value="female">
-                                    <span>Female</span>
+                                    <span class="white-text">Female</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input name="sex" type="radio" class="sex" value="other">
-                                    <span>Other</span>
+                                    <span class="white-text">Other</span>
                                 </label>
                             </p>
                         </div>
