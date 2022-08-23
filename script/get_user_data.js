@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let userEmail = getCookie('email');
 console.log(userEmail);
-ajax('core/get_user_data.php', 'POST', getUserData, { "email": userEmail });
+ajax('core/get_user_data.php', 'POST', getUserData, { "getEmail": userEmail });
 
 function getCookie(cname) {
     let name = cname + '=';

@@ -16,7 +16,7 @@ document.querySelector('#signup-submit').onclick = function (event) {
         'pass': pass,
         'email': email,
         'birthday': birthday,
-        'sex': sex,
+        'sex': sex
     }
     ajax('core/signup.php', 'POST', signup, data);
 
@@ -41,7 +41,7 @@ document.querySelector('#login-submit').onclick = function (event) {
 
     let data = {
         'pass': pass,
-        'email': email,
+        'email': email
     }
     ajax('core/login.php', 'POST', login, data);
 
