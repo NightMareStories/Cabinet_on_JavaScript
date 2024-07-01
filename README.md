@@ -10,12 +10,14 @@
 ## If you want to test the operation of the application, then you will need:
 &nbsp;
 ### **1. `Download and install the "basic" version of "`[OpenServer] (https://ospanel.io)`" from the official website`;**
-### **2. `Drag the folder with the "www" project to the "domains" folder of the "OpenServer" application`;**
-### **3. `Open "OpenServer" and click "start server", then go to the "advanced" tab and select the "PhpMyAdmin" application - for working with databases`;**
-### **4. `Enter the password and login, by default: "root", "root"`;**
-### **5. `Now you need to create a database, on the left side, click on "New", enter the name "cabinet_on_javascript" and leave the default encoding, click "Create"`;**
-### **6. `Select the "created" database and select "Import" on the right side of the upper toolbar, now you need to specify the "SQL" file from the "www" folder, after selecting, scroll to the bottom and press "go". Now you can track registered users and their personal data in "cabinet_on_javascript"`;**
-### **6. `Now return to the "OpenServer" application and select the "My projects" tab, select the "www" project from the list. The Cabinet on JavaScript application starts`.**
+### **2. `Create a folder "www" and drag all the files from the folder "Cabinet_on_JavaScript" into it`;**
+### **3. `Next, you need to put the "www" folder in the "domains" folder of the "OpenServer" application (click on the tray icon and select "Project folder")`;**
+### **4. `After completing all the previous steps, open "OpenServer". Next, go to "Settings", select the "Modules" tab. From the "MySQL / MariaDB" drop-down list, select the latest version of "MySQL" (currently "MySQL-8.0-Win10") and save your changes`;** 
+### **5. `Close the settings and click "Run server", then go to the "Advanced" tab and select the "PhpMyAdmin" application - for working with databases`;**
+### **6. `Enter your login and password, by default: "root", "" (leave the password field empty)`**;
+### **7. `Now you need to create a database, on the left side, click on "New", enter the name "cabinet_on_javascript" and leave the default encoding, click "Create"`;**
+### **8. `Select the "created" database and select "Import" on the right side of the upper toolbar, now you need to specify the "SQL" file from the "www" folder, after selecting, scroll to the bottom and press "go". Now you can track registered users and their personal data in "cabinet_on_javascript"`;**
+### **9. `Now return to the "OpenServer" application and select the "My projects" tab, select the "www" project from the list. The Cabinet on JavaScript application starts`.**
 &nbsp;
 
 ## **Finally, you can start testing the application!** 
