@@ -14,10 +14,10 @@
 ### **3. `Next, you need to put the "www" folder in the "domains" folder of the "OpenServer" application (click on the tray icon and select "Project folder")`;**
 ### **4. `After completing all the previous steps, open "OpenServer". Next, go to "Settings", select the "Modules" tab. From the "MySQL / MariaDB" drop-down list, select the latest version of "MySQL" (currently "MySQL-8.0-Win10") and save your changes`;** 
 ### **5. `Close the settings and click "Run server", then go to the "Advanced" tab and select the "PhpMyAdmin" application - for working with databases`;**
-### **6. `Enter your login and password, by default: "root", "" (leave the password field empty)`**;
+### **6. `Enter your login and password, by default: "root", "" (leave the password field empty)`;**
 ### **7. `Now you need to create a database, on the left side, click on "New", enter the name "cabinet_on_javascript" and leave the default encoding, click "Create"`;**
 ### **8. `Select the "created" database and select "Import" on the right side of the upper toolbar, now you need to specify the "SQL" file from the "www" folder, after selecting, scroll to the bottom and press "go". Now you can track registered users and their personal data in "cabinet_on_javascript"`;**
-### **9. `Now return to the "OpenServer" application and select the "My projects" tab, select the "www" project from the list. The Cabinet on JavaScript application starts`.**
+### **9. `Now return to the "OpenServer" application and select the "My projects" tab, select the "www" project from the list. The Cabinet on JavaScript application starts`;**
 &nbsp;
 
 ## **Finally, you can start testing the application!** 
