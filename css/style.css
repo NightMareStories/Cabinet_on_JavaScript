@@ -21,12 +21,15 @@
 }
 
 html {
+  line-height: normal;
   font-size: 15px;
   height: 100%;
 }
 
 body {
+  /* font-family: Montserrat-Regular; */
   font-size: 15px;
+  color: #000000;
   height: 100%;
 }
 
@@ -44,10 +47,21 @@ h4,
 h5,
 h6 {
   margin: 0;
+  line-height: normal;
+}
+
+@supports (-webkit-appearance:none) {
+
 }
 
 ._hide {
   display: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 [type="radio"]:not(:checked) + span:before,
@@ -75,8 +89,9 @@ h6 {
 }
 
 .site-header {
+  height: 100%;
   background-color: #beb394;
-  padding: 20px 0px 5px 0px;
+  padding: 20px 0px 0px 0px;
 }
 
 .site-title {
@@ -218,6 +233,7 @@ h6 {
 .cabinet-page {
   width: 100%;
   height: 100%;
+  min-height: 100%;
   background: url(../img/cabinet-img.png) center center no-repeat;
   background-size: 100% 100%;
 }
@@ -245,6 +261,10 @@ h6 {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.authorization-block {
+  height: 100%;
+}
+
 .authorization-block__reception,
 .authorization-block__registration,
 .authorization-block__login {
@@ -259,6 +279,11 @@ h6 {
   height: 100%;
 }
 
+@media (max-width: 790px) {
+  .cabinet-page {
+    min-height: auto;
+  }
+}
 @media (max-width: 600px) {
   .sign-up-modal {
     height: auto;
