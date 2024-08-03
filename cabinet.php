@@ -16,10 +16,7 @@ if (!isset($_COOKIE['email']) or trim($_COOKIE['email']) == '') {
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/fonts.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="components/HeaderGeneral/Header.css">
-    <link type="text/css" rel="stylesheet" href="components/FooterGeneral/Footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User cabinet</title>
 </head>
@@ -49,8 +46,11 @@ if (!isset($_COOKIE['email']) or trim($_COOKIE['email']) == '') {
                         <div class="g-header-nav__content">
                             <nav class="g-header-nav__column">
                                 <ul class="g-header-nav__actions g-actions-header">
-                                    <li><a href='https://github.com/NightMareStories/Cabinet_on_JavaScript.git' class="g-actions-header__link" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a></li>
-                                    <li><a href='http://about-my-portfolio.site' class="g-actions-header__link" target="_blank" rel="noopener noreferrer"><span>My Portfolio</span></a></li>
+                                    <li><a href='https://github.com/NightMareStories/Cabinet_on_JavaScript.git'
+                                            class="g-actions-header__link" target="_blank"
+                                            rel="noopener noreferrer"><span>GitHub</span></a></li>
+                                    <li><a href='http://about-my-portfolio.site' class="g-actions-header__link"
+                                            target="_blank" rel="noopener noreferrer"><span>My Portfolio</span></a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -132,8 +132,11 @@ if (!isset($_COOKIE['email']) or trim($_COOKIE['email']) == '') {
                     </div>
                     <nav class="g-block-footer__nav">
                         <ul class="g-block-footer__actions g-actions-footer">
-                            <li><a href='https://github.com/NightMareStories/Cabinet_on_JavaScript.git' class="g-actions-footer__link" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a></li>
-                            <li><a href='http://about-my-portfolio.site' class="g-actions-footer__link" target="_blank" rel="noopener noreferrer"><span>My Portfolio</span></a></li>
+                            <li><a href='https://github.com/NightMareStories/Cabinet_on_JavaScript.git'
+                                    class="g-actions-footer__link" target="_blank"
+                                    rel="noopener noreferrer"><span>GitHub</span></a></li>
+                            <li><a href='http://about-my-portfolio.site' class="g-actions-footer__link" target="_blank"
+                                    rel="noopener noreferrer"><span>My Portfolio</span></a></li>
                         </ul>
                     </nav>
                 </div>

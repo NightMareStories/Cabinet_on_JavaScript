@@ -7,7 +7,7 @@ $email = trim($_POST['email']);
 $birthday = trim($_POST['birthday']);
 $sex = trim($_POST['sex']);
 
-if ($name =='' OR $pass=='' OR $email=='' OR $birthday=='' OR $sex ==''){
+if ($name == '' or $pass == '' or $email == '' or $birthday == '' or $sex == '') {
     echo 2;
     die;
 }
@@ -17,9 +17,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
-$sql = "INSERT INTO users (name, email, password, birthday, sex) VALUES ('".$name."', '".$email."', '".$pass."', '".$birthday."', '".$sex."')";
+$sql = "INSERT INTO users (name, email, password, birthday, sex) VALUES ('" . $name . "', '" . $email . "', '" . $pass . "', '" . $birthday . "', '" . $sex . "')";
 
 if ($conn->query($sql) === TRUE) {
     echo 1;

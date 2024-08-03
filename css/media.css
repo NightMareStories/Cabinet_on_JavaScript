@@ -1,0 +1,49 @@
+/*======================= Media =========================*/
+
+@media (max-width: 790px) {
+  .cabinet-page {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .sign-up-modal {
+    height: auto;
+  }
+
+  .right-50 {
+    max-height: 485px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cabinet-page {
+    height: auto;
+  }
+
+  .page-form__content {
+    padding: 5px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sign-up-modal {
+    width: 270px;
+  }
+
+  .left-50,
+  .right-50 {
+    padding: 0;
+  }
+
+  .right-50 {
+    max-height: 465px;
+    padding: 0px 10px 0px 0px;
+  }
+
+  .form-slider {
+    width: 515px;
+  }
+}
+
+/*=======================================================*/

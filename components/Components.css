@@ -1,0 +1,47 @@
+/*==================== Main styles ======================*/
+
+html body .general-header,
+html body .general-footer {
+    font-family: Montserrat-Regular;
+    font-size: 15px;
+}
+
+/*=======================================================*/
+
+
+/*============= Materialize compatibility ===============*/
+
+/* html body .g-header-nav__column,
+html body .g-block-footer__nav {
+    width: auto;
+    height: inherit;
+    line-height: inherit;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+html body .g-actions-header__link,
+html body .g-actions-footer__link {
+    line-height: 1.15;
+    display: inline-block;
+    padding: 0;
+}
+
+.general-header h1,
+.general-header h2,
+.general-header h3,
+.general-header h4,
+.general-header h5,
+.general-header h6,
+.general-footer h1,
+.general-footer h2,
+.general-footer h3,
+.general-footer h4,
+.general-footer h5,
+.general-footer h6 {
+    line-height: inherit;
+} */
+
+/*=======================================================*/

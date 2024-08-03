@@ -19,7 +19,6 @@ document.querySelectorAll('.modal-wrap').forEach(function (element) {
 
 function showModal() {
     let modalId = this.dataset.modal;
-    
     let mainImg = document.querySelector('.authorization-block').children;
     if (modalId == "#sign-up") {
         for (let i = 0; i < mainImg.length; i++) {
@@ -60,7 +59,6 @@ function closeModal() {
             }
         }
         element.classList.add('hide');
-
     });
     document.onkeydown = null;
 }
@@ -73,13 +71,13 @@ document.querySelector('#sign-up .modal-project').onclick = function (event) {
     event.stopPropagation();
 }
 
-window.addEventListener('resize', function() {
-  sliderWork();
+window.addEventListener('resize', function () {
+    sliderWork();
 });
 
-function sliderWork (){
+function sliderWork() {
     let slider = document.querySelector('.form-slider');
-    
+
     if (window.innerWidth <= 420) {
         if (slider.style.marginLeft == '-345px') {
             slider.style.marginLeft = '-255px';
