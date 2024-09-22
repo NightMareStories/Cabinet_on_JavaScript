@@ -11,7 +11,7 @@ html body .general-footer {
 
 /*============= Materialize compatibility ===============*/
 
-/* html body .g-header-nav__column,
+html body .g-header-nav__column,
 html body .g-block-footer__nav {
     width: auto;
     height: inherit;
@@ -42,6 +42,6 @@ html body .g-actions-footer__link {
 .general-footer h5,
 .general-footer h6 {
     line-height: inherit;
-} */
+}
 
 /*=======================================================*/

@@ -1,6 +1,6 @@
 {
   "name": "cabinet_on_javascript",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "An application for creating a personal account, login, updating personal account data, working with databases in JavaScript and PHP.",
   "type": "commonjs",
   "scripts": {

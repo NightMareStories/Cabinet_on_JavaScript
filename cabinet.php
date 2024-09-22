@@ -49,7 +49,7 @@ if (!isset($_COOKIE['email']) or trim($_COOKIE['email']) == '') {
                                     <li><a href='https://github.com/NightMareStories/Cabinet_on_JavaScript.git'
                                             class="g-actions-header__link" target="_blank"
                                             rel="noopener noreferrer"><span>GitHub</span></a></li>
-                                    <li><a href='http://about-my-portfolio.site' class="g-actions-header__link"
+                                    <li><a href='http://about-my-portfolio.website' class="g-actions-header__link"
                                             target="_blank" rel="noopener noreferrer"><span>My Portfolio</span></a></li>
                                 </ul>
                             </nav>
@@ -135,7 +135,7 @@ if (!isset($_COOKIE['email']) or trim($_COOKIE['email']) == '') {
                             <li><a href='https://github.com/NightMareStories/Cabinet_on_JavaScript.git'
                                     class="g-actions-footer__link" target="_blank"
                                     rel="noopener noreferrer"><span>GitHub</span></a></li>
-                            <li><a href='http://about-my-portfolio.site' class="g-actions-footer__link" target="_blank"
+                            <li><a href='http://about-my-portfolio.website' class="g-actions-footer__link" target="_blank"
                                     rel="noopener noreferrer"><span>My Portfolio</span></a></li>
                         </ul>
                     </nav>
