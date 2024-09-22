@@ -1,11 +1,1264 @@
 /*======================= Import ========================*/
 
-@import 'fonts.css';
-@import 'main.css';
-@import '../components/ComponentsReset.css';
-@import '../components/Components.css';
-@import '../components/GeneralHeader/Header.css';
-@import '../components/GeneralFooter/Footer.css';
-@import 'media.css';
+/*======================= Fonts =========================*/
+
+/*--------------------- Main fonts ----------------------*/
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-ExtraLightItalic";
+  font-display: swap;
+  src: url("../fonts/Montserrat-ExtraLightItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat-ExtraLight";
+  font-display: swap;
+  src: url("../fonts/Montserrat-ExtraLight.woff") format("woff"), url("../fonts/Montserrat-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Light";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Italic";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat-Italic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*-------------------------------------------------------*/
 
 /*=======================================================*/
+
+/*=================== Default styles ====================*/
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+html body ._container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+/*=======================================================*/
+
+/*==================== Main styles ======================*/
+
+._hide {
+  display: none;
+}
+
+[type=radio]:not(:checked) + span:before,
+[type=radio]:not(:checked) + span:after {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+[type=checkbox].filled-in:not(:checked) + span:not(.lever):after {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cabinet-header {
+  margin: 20px 0px;
+}
+
+.user-cabinet-header {
+  display: inline;
+  font-size: 20px;
+  background-color: rgba(174, 125, 75, 0.7);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 0px 5px;
+}
+
+.site-header {
+  height: 100%;
+  background-color: #beb394;
+  padding: 20px 0px 0px 0px;
+}
+
+.site-title {
+  font-size: 24px;
+  color: #8e6121;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.btn {
+  background-color: #ae7d4b;
+}
+
+.modal-show {
+  margin: 5px;
+}
+
+.modal-wrap {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.modal-project label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-project {
+  position: relative;
+  width: 250px;
+  border-radius: 12px;
+  -webkit-box-shadow: 1px 1px 10px #1d1d1d;
+  box-shadow: 1px 1px 10px #1d1d1d;
+  padding: 10px;
+  background-color: rgba(120, 95, 69, 0.9);
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.modal-project-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+.form-slider {
+  width: 700px;
+  height: 240px;
+  margin-left: 0;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.left-50,
+.right-50 {
+  width: 50%;
+  float: left;
+  min-height: 50px;
+  padding: 10px;
+}
+
+.right-50 {
+  min-height: 50px;
+  max-height: 330px;
+  overflow-y: scroll;
+}
+
+.right-50 p {
+  padding: 0px 0px 10px 0px;
+}
+
+.accept-rules p:last-child {
+  margin: 0;
+}
+
+.form-slider .accept-rules .checkbox-rules {
+  padding-left: 25px;
+}
+
+.read-rules,
+.read-rules-back {
+  cursor: pointer;
+  text-decoration: underline;
+  color: skyblue;
+}
+
+.read-rules-back {
+  margin: 0px 0px 5px 0px;
+}
+
+.rules-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sign-up-modal {
+  height: auto;
+  width: 370px;
+}
+
+.form-slider-wrapper {
+  overflow: hidden;
+}
+
+.toast {
+  background-color: rgba(174, 125, 75, 0.7);
+  color: white;
+  border-radius: 12px;
+}
+
+.cabinet-page {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: url(../img/cabinet-img.png) center center no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.page-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.page-form__content {
+  background-color: rgba(174, 125, 75, 0.5);
+  width: 600px;
+  padding: 20px;
+}
+
+.page-form__content label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.authorization-block {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+.authorization-block__reception,
+.authorization-block__registration,
+.authorization-block__login {
+  width: 100%;
+  height: 100%;
+}
+
+.authorization-block__reception_img,
+.authorization-block__registration_img,
+.authorization-block__login_img {
+  width: 100%;
+  height: 100%;
+}
+
+/*=======================================================*/
+
+/*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+
+/* Reset box-model and set borders */
+
+/* ============================================ */
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  min-width: 0;
+}
+
+/* Document */
+
+/* ============================================ */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-tap-highlight-color: transparent;
+  /* 3 */
+}
+
+/* Sections */
+
+/* ============================================ */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+
+/* ============================================ */
+
+.general-header p,
+.general-header table,
+.general-header blockquote,
+.general-header address,
+.general-header pre,
+.general-header iframe,
+.general-header form,
+.general-header figure,
+.general-header dl,
+.general-footer p,
+.general-footer table,
+.general-footer blockquote,
+.general-footer address,
+.general-footer pre,
+.general-footer iframe,
+.general-footer form,
+.general-footer figure,
+.general-footer dl {
+  margin: 0;
+}
+
+/* Headings */
+
+/* ============================================ */
+
+.general-header h1,
+.general-header h2,
+.general-header h3,
+.general-header h4,
+.general-header h5,
+.general-header h6,
+.general-footer h1,
+.general-footer h2,
+.general-footer h3,
+.general-footer h4,
+.general-footer h5,
+.general-footer h6 {
+  font-size: inherit;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+
+/* ============================================ */
+
+.general-header ul,
+.general-header ol,
+.general-footer ul,
+.general-footer ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+
+/* ============================================ */
+
+.general-header dt,
+.general-footer dt {
+  font-weight: bold;
+}
+
+.general-header dd,
+.general-footer dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+
+/* ============================================ */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+.general-header hr,
+.general-footer hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+.general-header pre,
+.general-footer pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+.general-header address,
+.general-footer address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+
+/* ============================================ */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+.general-header a,
+.general-footer a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+.general-header abbr[title],
+.general-footer abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+.general-header b,
+.general-header strong,
+.general-footer b,
+.general-footer strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+.general-header code,
+.general-header kbd,
+.general-header samp,
+.general-footer code,
+.general-footer kbd,
+.general-footer samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+.general-header small,
+.general-footer small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+.general-header sub,
+.general-header sup,
+.general-footer sub,
+.general-footer sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.general-header sub,
+.general-footer sub {
+  bottom: -0.25em;
+}
+
+.general-header sup,
+.general-footer sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+
+/* ============================================ */
+
+/**
+ * Prevent vertical alignment issues.
+ */
+
+.general-header svg,
+.general-header img,
+.general-header embed,
+.general-header object,
+.general-header iframe,
+.general-footer svg,
+.general-footer img,
+.general-footer embed,
+.general-footer object,
+.general-footer iframe {
+  vertical-align: baseline;
+}
+
+/* Forms */
+
+/* ============================================ */
+
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+
+.general-header button,
+.general-header input,
+.general-header optgroup,
+.general-header select,
+.general-header textarea,
+.general-footer button,
+.general-footer input,
+.general-footer optgroup,
+.general-footer select,
+.general-footer textarea {
+  -webkit-appearance: none;
+  /* 1 */
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+
+.general-header button,
+.general-header [type=button],
+.general-header [type=reset],
+.general-header [type=submit],
+.general-footer button,
+.general-footer [type=button],
+.general-footer [type=reset],
+.general-footer [type=submit] {
+  cursor: pointer;
+}
+
+.general-header button:disabled,
+.general-header [type=button]:disabled,
+.general-header [type=reset]:disabled,
+.general-header [type=submit]:disabled,
+.general-footer button:disabled,
+.general-footer [type=button]:disabled,
+.general-footer [type=reset]:disabled,
+.general-footer [type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+
+.general-header :-moz-focusring,
+.general-footer :-moz-focusring {
+  outline: auto;
+}
+
+.general-header select:disabled,
+.general-footer select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+
+.general-header option,
+.general-footer option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+
+.general-header fieldset,
+.general-footer fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.general-header legend,
+.general-footer legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+.general-header progress,
+.general-footer progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+.general-header textarea,
+.general-footer textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+.general-header [type=number]::-webkit-inner-spin-button,
+.general-header [type=number]::-webkit-outer-spin-button,
+.general-footer [type=number]::-webkit-inner-spin-button,
+.general-footer [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+
+.general-header [type=search],
+.general-footer [type=search] {
+  outline-offset: -2px;
+  /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+.general-header [type=search]::-webkit-search-decoration,
+.general-footer [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+
+.general-header ::-webkit-file-upload-button,
+.general-footer ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+
+.general-header [type=number],
+.general-footer [type=number] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+
+.general-header label[for],
+.general-footer label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+
+/* ============================================ */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+.general-header details,
+.general-footer details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+.general-header summary,
+.general-footer summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+
+.general-header [contenteditable]:focus,
+.general-footer [contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+
+/* ============================================ */
+
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+
+.general-header table,
+.general-footer table {
+  border-color: inherit;
+  /* 1 */
+  border-collapse: collapse;
+}
+
+.general-header caption,
+.general-footer caption {
+  text-align: left;
+}
+
+.general-header td,
+.general-header th,
+.general-footer td,
+.general-footer th {
+  vertical-align: top;
+  padding: 0;
+}
+
+.general-header th,
+.general-footer th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/*==================== Main styles ======================*/
+
+html body .general-header,
+html body .general-footer {
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+}
+
+/*=======================================================*/
+
+/*============= Materialize compatibility ===============*/
+
+html body .g-header-nav__column,
+html body .g-block-footer__nav {
+  width: auto;
+  height: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+html body .g-actions-header__link,
+html body .g-actions-footer__link {
+  line-height: 1.15;
+  display: inline-block;
+  padding: 0;
+}
+
+.general-header h1,
+.general-header h2,
+.general-header h3,
+.general-header h4,
+.general-header h5,
+.general-header h6,
+.general-footer h1,
+.general-footer h2,
+.general-footer h3,
+.general-footer h4,
+.general-footer h5,
+.general-footer h6 {
+  line-height: inherit;
+}
+
+/*=======================================================*/
+
+/*==================== Main styles ======================*/
+
+html body .general-header {
+  height: 97px;
+  line-height: 1.5;
+  padding: 18px 0;
+  margin-bottom: 150px;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+/*----------------------- Main --------------------------*/
+
+html body .g-top-header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html body .g-header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html body .g-header-info__logo_img {
+  height: 57px;
+  width: 57px;
+  border-radius: 50%;
+}
+
+html body .g-header-info__text {
+  padding-left: 9px;
+}
+
+html body .g-header-info__text_username {
+  font-family: Montserrat-Bold;
+  line-height: 18px;
+  font-size: 16px;
+  margin-bottom: 3px;
+  color: #000000;
+}
+
+html body .g-header-info__text_userprof {
+  font-size: 12px;
+  color: rgba(43, 42, 44, 0.7);
+}
+
+/*-------------------------------------------------------*/
+
+/*----------------------- Nav ---------------------------*/
+
+html body .g-header-nav {
+  height: 24px;
+}
+
+html body .g-actions-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+html body .g-actions-header li {
+  margin: 0px 20px 0px 0px;
+}
+
+html body .g-actions-header li:last-child {
+  margin: 0;
+}
+
+html body .g-actions-header__link {
+  position: relative;
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  line-height: normal;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+html body .g-actions-header__link:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+html body .g-actions-header__link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  z-index: 1;
+  height: 2px;
+  width: 0;
+  background-color: #000000;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+
+html body .g-actions-header__link:hover::after {
+  width: 100%;
+}
+
+/*-------------------------------------------------------*/
+
+/*=======================================================*/
+
+/*======================= Media =========================*/
+
+/*=======================================================*/
+
+/*==================== Main styles ======================*/
+
+html body .general-footer {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  height: 64px;
+  line-height: 24px;
+  padding: 20px 0px;
+  margin-top: 150px;
+  background-color: #000000;
+  -webkit-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.6);
+}
+
+/*----------------------- Main --------------------------*/
+
+html body .g-block-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+html body .g-block-footer__credits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html body .g-block-footer__project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html body .g-block-footer__project_title {
+  display: inline-block;
+  text-align: center;
+  font-family: Montserrat-ExtraLight;
+  font-size: 20px;
+  color: #8d8d8e;
+}
+
+html body .g-block-footer__project_title span {
+  font-family: Montserrat-Bold;
+  color: rgba(255, 0, 0, 0.8588235294);
+}
+
+html body .g-block-footer__copyrights {
+  font-size: 14px;
+  padding-right: 20px;
+  margin-right: 20px;
+  color: #8d8d8e;
+  border-right: 2px solid rgba(106, 105, 107, 0.6);
+}
+
+/*-------------------------------------------------------*/
+
+/*----------------------- Nav ---------------------------*/
+
+html body .g-actions-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+html body .g-actions-footer__link {
+  font-size: 14px;
+  margin-right: 20px;
+  color: #8d8d8e;
+  text-transform: capitalize;
+}
+
+html body .g-actions-footer__link:hover {
+  color: #bbbbcc;
+}
+
+html body .g-actions-footer__link_btn {
+  font-family: Montserrat-Bold;
+  line-height: 1.1;
+  padding: 10px 25px;
+  margin: 10px 30px;
+  border: 2px solid #8d8d8e;
+  border-radius: 20px;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+html body .g-actions-footer__link_btn:hover {
+  background-color: #bbbbcc;
+  color: #000000;
+}
+
+html body .g-actions-footer__link:last-child {
+  margin-left: 0;
+}
+
+/*-------------------------------------------------------*/
+
+/*=======================================================*/
+
+/*======================= Media =========================*/
+
+/*=======================================================*/
+
+/*======================= Media =========================*/
+
+/*=======================================================*/
+
+/*=======================================================*/
+
+@media (max-width: 790px) {
+  html body .general-footer {
+    height: auto;
+    line-height: normal;
+  }
+
+  html body .g-block-footer {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  html body .g-block-footer__credits {
+    margin: 20px 0px 0px 0px;
+  }
+
+  .cabinet-page {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  html body .g-block-footer__credits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+  }
+
+  html body .g-block-footer__copyrights {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  html body .g-block-footer__project {
+    margin: 0px 0px 20px 0px;
+  }
+
+  html body .g-block-footer__project_title {
+    font-size: 18px;
+  }
+
+  html body .g-actions-footer__link {
+    margin-right: 10px;
+  }
+
+  html body .g-actions-footer__link:last-child {
+    margin-left: 10px;
+  }
+
+  .sign-up-modal {
+    height: auto;
+  }
+
+  .right-50 {
+    max-height: 485px;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .general-header {
+    height: auto;
+    line-height: normal;
+  }
+
+  html body .g-header-nav {
+    height: auto;
+    margin: 0px 0px 0px 5px;
+  }
+
+  html body .g-actions-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  html body .g-actions-header li {
+    margin: 0px 0px 10px 0px;
+  }
+
+  html body .g-actions-header li:last-child {
+    margin: 0;
+  }
+
+  .cabinet-page {
+    height: auto;
+  }
+
+  .page-form__content {
+    padding: 5px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sign-up-modal {
+    width: 270px;
+  }
+
+  .left-50,
+  .right-50 {
+    padding: 0;
+  }
+
+  .right-50 {
+    max-height: 465px;
+    padding: 0px 10px 0px 0px;
+  }
+
+  .form-slider {
+    width: 515px;
+  }
+}
